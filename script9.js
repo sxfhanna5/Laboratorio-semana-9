@@ -70,8 +70,8 @@ console.log("¿Existe uva?", existeFruta("uva"));
 const frutasCortas = frutas.filter(fruta => fruta.length <= 4);
 console.log("Frutas cortas (≤ 4 letras):", frutasCortas);
 
-function eliminarFruta(nombre) {
-    const index = frutas.indexOf(nombre);
+function eliminarFruta(palabra) {
+    const index = frutas.indexOf(palabra);
     if (index !== -1) {
         frutas.splice(index, 1); 
         return true;
