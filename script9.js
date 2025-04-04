@@ -69,3 +69,17 @@ console.log("¿Existe uva?", existeFruta("uva"));
 
 const frutasCortas = frutas.filter(fruta => fruta.length <= 4);
 console.log("Frutas cortas (≤ 4 letras):", frutasCortas);
+
+function eliminarFruta(nombre) {
+    const index = frutas.indexOf(nombre);
+    if (index !== -1) {
+        frutas.splice(index, 1); 
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log("¿Se eliminó kiwi?", eliminarFruta("kiwi"));   
+console.log("¿Se eliminó mango?", eliminarFruta("mango")); 
+console.log("Frutas después de eliminar:", frutas);
